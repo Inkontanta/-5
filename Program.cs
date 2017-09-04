@@ -63,18 +63,28 @@ namespace Zadanie_5
                 }
                 Console.WriteLine();
             }
+
+
+            int a=0;
+
             for (int i = 0; i < n; i++)
             {
-                for (j = 0; j < n; j++)
+
+                j = 0;
+                while (j != n-1)
                 {
-                    c = c + arr[i, j];
+                    if (arr[i, j] == arr[i, j + 1])
+                    {
+                        a++;
+                        
+                    }
+                    j++;
                 }
-                j--;
-                if (c / n == arr[j, i])
+                if (a == n)
                 {
                     Console.WriteLine(i+1);
                 }
-                c = 0;
+                a = 0;
 
             }
             Console.ReadKey();
