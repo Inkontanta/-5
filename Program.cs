@@ -66,24 +66,26 @@ namespace Zadanie_5
 
 
             int a=0;
-
+            Console.WriteLine("Одинаковые элементы в строках: ");
             for (int i = 0; i < n; i++)
             {
 
-                j = 0;
-                while (j != n-1)
+                j = n-1;
+                while (j != 0)
                 {
-                    if (arr[i, j] == arr[i, j + 1])
+                    if (arr[i, j] == arr[i, j - 1])
                     {
                         a++;
-                        
                     }
-                    j++;
+                    j--;
                 }
-                if (a == n)
+               
+                if (a == n-1)
                 {
-                    Console.WriteLine(i+1);
+                    i++;
+                    Console.WriteLine(i);
                 }
+               
                 a = 0;
 
             }
